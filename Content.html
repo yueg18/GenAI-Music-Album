@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Content</title>
+    <style>
+        body, h1, p, a, ul, li { margin: 0; padding: 0; list-style-type: none; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #282c34; 
+            color: #FFF; 
+            line-height: 1.6; 
+            padding: 20px;
+            text-align: center;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            padding: 20px; 
+            animation: fadeInUp 1.5s ease-out;
+        }
+        h1, h2 { 
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        ul { 
+            text-align: left; 
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        li { 
+            text-align: left;
+            margin: 5px 0;
+        }
+        .btn { 
+            display: inline-block; 
+            background-color: #007bff; 
+            color: #ffffff; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover { 
+            background-color: #0056b3;
+        }
+        .featured-song {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .song-description {
+            width: 48%;
+            text-align: left;
+        }
+        .video-wrapper {
+            width: 48%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0, 40px, 0);
+                opacity: 0;
+            }
+            to {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Album Tracks</h1>
+        <ul>
+            <li>Track 1: Teacher Appreciation Song</li>
+            <li>Track 2: Digital Dreams</li>
+            <li>Track 3: The Dawn of AI</li>
+            <!-- Add more tracks as needed -->
+        </ul>
+        <div class="featured-song">
+            <div class="song-description">
+                <h2>Featured Song: Teacher Appreciation Song</h2>
+                <p>The first song on the album is a farewell piece dedicated to my son's kindergarten teacher, marking her last day. This song is a heartfelt thank you for the incredible dedication, care, and joy she has brought into our children's lives. In recognition of her significant impact, I have composed this song, with the hope that it brings as much joy to her and the children as she has brought to us.</p>
+            </div>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="song.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <a href="index.html" class="btn">Back to Album Introduction</a>
+    </div>
+</body>
+</html>
